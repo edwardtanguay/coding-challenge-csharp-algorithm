@@ -88,6 +88,11 @@ public class LoadTester
             {
                 Console.WriteLine("Höhe des {0}. Packstücks: ", i + 1);
                 itemHeight = Convert.ToInt32(Console.ReadLine());
+
+                if (itemHeight > containerMaxHeight)
+                {
+                    Console.WriteLine("Die Höhe des Packstücks kann nicht über der maximal Stapelbaren Höhe des Containers liegen. Bitte geben Sie einen passenden Höhenwert ein: ");
+                }
             }
             while (itemHeight > containerMaxHeight);
 
